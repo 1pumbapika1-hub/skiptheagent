@@ -1,191 +1,195 @@
 export default function Home() {
   return (
-    <main style={{
-      minHeight: "100vh",
-      background: "#070707",
-      color: "white",
-      fontFamily: "Arial, sans-serif"
-    }}>
-      <nav style={{
-        display: "flex",
-        justifyContent: "space-between",
-        alignItems: "center",
-        padding: "28px 60px",
-        borderBottom: "1px solid rgba(201, 159, 43, 0.25)"
-      }}>
-        <div style={{
-          fontSize: "24px",
-          fontWeight: "bold",
-          letterSpacing: "2px",
-          color: "#C99F2B"
-        }}>
-          SKIP THE AGENT
+    <main>
+      <nav className="navbar">
+        <div className="brand">
+          <div className="logo-mark">STA</div>
+          <div>
+            <div className="brand-name">Skip The Agent</div>
+            <div className="brand-tagline">Sell Smart. Settle Safe.</div>
+          </div>
         </div>
 
-        <div style={{
-          display: "flex",
-          gap: "28px",
-          alignItems: "center",
-          fontSize: "15px"
-        }}>
+        <div className="nav-links">
           <a>Sell</a>
           <a>Buy</a>
           <a>How it works</a>
-          <a>Solicitor Support</a>
-          <button style={{
-            background: "#C99F2B",
-            color: "#070707",
-            border: "none",
-            padding: "12px 20px",
-            borderRadius: "8px",
-            fontWeight: "bold",
-            cursor: "pointer"
-          }}>
-            List Your Home
-          </button>
+          <a>Solicitor support</a>
+          <button className="nav-button">List your home</button>
         </div>
       </nav>
 
-      <section style={{
-        display: "grid",
-        gridTemplateColumns: "1.1fr 0.9fr",
-        gap: "60px",
-        alignItems: "center",
-        padding: "90px 60px"
-      }}>
+      <section className="hero">
+        <div className="hero-text">
+          <p className="eyebrow">Queensland private property sales</p>
+
+          <h1>Sell your home without agent commissions.</h1>
+
+          <p className="hero-subtitle">
+            Create a premium listing, manage buyer enquiries, schedule open
+            homes, and connect with solicitor support when you are ready to
+            move to contract.
+          </p>
+
+          <div className="hero-actions">
+            <button className="primary-button">Start listing</button>
+            <button className="secondary-button">Browse properties</button>
+          </div>
+
+          <div className="trust-row">
+            <span>✓ Seller dashboard</span>
+            <span>✓ Open home bookings</span>
+            <span>✓ Solicitor support</span>
+          </div>
+        </div>
+
+        <div className="hero-card">
+          <div className="property-image-placeholder">
+            <span>Future property photo / 3D house visual</span>
+          </div>
+
+          <div className="property-preview">
+            <div>
+              <p className="preview-label">Example listing</p>
+              <h3>Modern family home</h3>
+              <p>Brisbane, QLD · 4 bed · 2 bath · 2 car</p>
+            </div>
+            <div className="price-chip">$850k+</div>
+          </div>
+        </div>
+      </section>
+
+      <section className="search-panel">
         <div>
-          <p style={{
-            color: "#C99F2B",
-            letterSpacing: "3px",
-            fontWeight: "bold",
-            marginBottom: "20px"
-          }}>
-            SELL SMART. SETTLE SAFE.
-          </p>
+          <label>Location</label>
+          <input placeholder="Suburb, postcode or region" />
+        </div>
+        <div>
+          <label>Property type</label>
+          <select>
+            <option>Any property</option>
+            <option>House</option>
+            <option>Townhouse</option>
+            <option>Apartment</option>
+            <option>Land</option>
+          </select>
+        </div>
+        <div>
+          <label>Price</label>
+          <select>
+            <option>Any price</option>
+            <option>Under $750k</option>
+            <option>$750k - $1m</option>
+            <option>$1m+</option>
+          </select>
+        </div>
+        <button>Search homes</button>
+      </section>
 
-          <h1 style={{
-            fontSize: "70px",
-            lineHeight: "1.02",
-            margin: "0 0 28px"
-          }}>
-            Sell your home without agent commissions.
-          </h1>
-
-          <p style={{
-            fontSize: "21px",
-            lineHeight: "1.6",
-            color: "#D6D6D6",
-            maxWidth: "680px",
-            marginBottom: "36px"
-          }}>
-            Skip The Agent helps Queensland sellers create premium listings,
-            manage buyer enquiries, schedule open homes, and connect with
-            solicitor support when ready to move to contract.
-          </p>
-
-          <div style={{ display: "flex", gap: "16px" }}>
-            <button style={{
-              background: "#C99F2B",
-              color: "#070707",
-              border: "none",
-              padding: "16px 28px",
-              borderRadius: "10px",
-              fontWeight: "bold",
-              fontSize: "16px",
-              cursor: "pointer"
-            }}>
-              Start Listing
-            </button>
-
-            <button style={{
-              background: "transparent",
-              color: "white",
-              border: "1px solid #C99F2B",
-              padding: "16px 28px",
-              borderRadius: "10px",
-              fontWeight: "bold",
-              fontSize: "16px",
-              cursor: "pointer"
-            }}>
-              Browse Properties
-            </button>
-          </div>
+      <section className="section">
+        <div className="section-heading">
+          <p className="eyebrow">How it works</p>
+          <h2>A guided private sale, not a risky DIY sale.</h2>
         </div>
 
-        <div style={{
-          border: "1px solid rgba(201, 159, 43, 0.4)",
-          borderRadius: "26px",
-          padding: "34px",
-          background: "linear-gradient(145deg, #111, #050505)",
-          boxShadow: "0 30px 80px rgba(0,0,0,0.45)"
-        }}>
-          <div style={{
-            height: "360px",
-            borderRadius: "20px",
-            background: "#111",
-            border: "1px solid rgba(201,159,43,0.25)",
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-            color: "#C99F2B",
-            fontSize: "44px",
-            fontWeight: "bold",
-            letterSpacing: "8px"
-          }}>
-            STA
-          </div>
-
-          <div style={{
-            marginTop: "24px",
-            display: "grid",
-            gridTemplateColumns: "1fr 1fr",
-            gap: "16px"
-          }}>
-            <InfoCard title="$20k+" text="Potential commission savings" />
-            <InfoCard title="QLD" text="Built for private sellers" />
-          </div>
+        <div className="feature-grid">
+          <Feature
+            number="01"
+            title="Create your listing"
+            text="Upload photos, add property details, select features, set your price guide, and choose inspection times."
+          />
+          <Feature
+            number="02"
+            title="Manage serious buyers"
+            text="Receive enquiries, track open home bookings, and keep buyer communication organised."
+          />
+          <Feature
+            number="03"
+            title="Move to contract safely"
+            text="When you're ready, connect with solicitor or conveyancing support for the legal side."
+          />
         </div>
       </section>
 
-      <section style={{
-        padding: "30px 60px 90px",
-        display: "grid",
-        gridTemplateColumns: "repeat(4, 1fr)",
-        gap: "22px"
-      }}>
-        <Feature title="List your home" text="Upload photos, details, price guide, and property features." />
-        <Feature title="Manage buyers" text="Receive enquiries, inspection bookings, and buyer messages." />
-        <Feature title="Open homes" text="Create inspection times and let buyers register attendance." />
-        <Feature title="Settle safely" text="Connect with solicitor support for contracts and settlement." />
+      <section className="split-section">
+        <div className="savings-card">
+          <p className="eyebrow">Savings calculator</p>
+          <h2>See what commission could cost you.</h2>
+
+          <div className="calculator-box">
+            <div>
+              <span>Example sale price</span>
+              <strong>$850,000</strong>
+            </div>
+            <div>
+              <span>Example 2.5% commission</span>
+              <strong>$21,250</strong>
+            </div>
+            <div className="highlight">
+              <span>Potential saving</span>
+              <strong>$20k+</strong>
+            </div>
+          </div>
+        </div>
+
+        <div className="legal-card">
+          <p className="eyebrow">Solicitor support</p>
+          <h2>Designed around legal confidence.</h2>
+          <p>
+            Skip The Agent is built to help sellers avoid unnecessary commission
+            while still treating contracts, disclosure, and settlement as serious
+            legal steps.
+          </p>
+          <button className="secondary-button">Learn about settlement</button>
+        </div>
       </section>
+
+      <section className="section">
+        <div className="section-heading">
+          <p className="eyebrow">Featured listings</p>
+          <h2>Premium property presentation, without the agent fee.</h2>
+        </div>
+
+        <div className="listing-grid">
+          <Listing title="Coastal family home" location="Sunshine Coast, QLD" />
+          <Listing title="Modern inner-city townhouse" location="Brisbane, QLD" />
+          <Listing title="Private acreage retreat" location="Gold Coast Hinterland, QLD" />
+        </div>
+      </section>
+
+      <footer>
+        <div>
+          <h3>Skip The Agent</h3>
+          <p>Sell Smart. Settle Safe.</p>
+        </div>
+        <p className="footer-note">
+          Platform concept only. Legal advice should be provided by qualified
+          legal professionals.
+        </p>
+      </footer>
     </main>
   );
 }
 
-function Feature({ title, text }) {
+function Feature({ number, title, text }) {
   return (
-    <div style={{
-      border: "1px solid rgba(201,159,43,0.25)",
-      borderRadius: "18px",
-      padding: "26px",
-      background: "#0D0D0D"
-    }}>
-      <h3 style={{ color: "#C99F2B", marginBottom: "12px" }}>{title}</h3>
-      <p style={{ color: "#CFCFCF", lineHeight: "1.5" }}>{text}</p>
+    <div className="feature-card">
+      <span>{number}</span>
+      <h3>{title}</h3>
+      <p>{text}</p>
     </div>
   );
 }
 
-function InfoCard({ title, text }) {
+function Listing({ title, location }) {
   return (
-    <div style={{
-      border: "1px solid rgba(201,159,43,0.25)",
-      borderRadius: "14px",
-      padding: "18px",
-      background: "#080808"
-    }}>
-      <strong style={{ color: "#C99F2B", fontSize: "24px" }}>{title}</strong>
-      <p style={{ color: "#CFCFCF", margin: "8px 0 0" }}>{text}</p>
+    <div className="listing-card">
+      <div className="listing-image-placeholder">Property photo</div>
+      <div className="listing-content">
+        <h3>{title}</h3>
+        <p>{location}</p>
+        <button>View listing</button>
+      </div>
     </div>
   );
 }
