@@ -37,15 +37,15 @@ export default function Home() {
           </div>
 
           <div className="trust-row">
-            <span>✓ Seller dashboard</span>
-            <span>✓ Open home bookings</span>
-            <span>✓ Solicitor support</span>
+            <span>✓ Queensland focused</span>
+            <span>✓ Secure seller dashboard</span>
+            <span>✓ Solicitor support available</span>
           </div>
         </div>
 
         <div className="hero-card">
           <div className="property-image-placeholder">
-            <span>Future property photo / 3D house visual</span>
+            <div className="house-line-art">STA</div>
           </div>
 
           <div className="property-preview">
@@ -84,6 +84,21 @@ export default function Home() {
           </select>
         </div>
         <button>Search homes</button>
+      </section>
+
+      <section className="trust-strip">
+        <div>
+          <strong>No agent commission</strong>
+          <span>Keep more of your sale price.</span>
+        </div>
+        <div>
+          <strong>Organised inspections</strong>
+          <span>Open homes and private bookings.</span>
+        </div>
+        <div>
+          <strong>Legal confidence</strong>
+          <span>Connect with solicitor support.</span>
+        </div>
       </section>
 
       <section className="section">
@@ -155,6 +170,12 @@ export default function Home() {
           <Listing title="Modern inner-city townhouse" location="Brisbane, QLD" />
           <Listing title="Private acreage retreat" location="Gold Coast Hinterland, QLD" />
         </div>
+      </section>
+
+      <section className="cta-section">
+        <p className="eyebrow">Ready to skip the commission?</p>
+        <h2>Start your private sale with a professional system behind you.</h2>
+        <button className="primary-button">List your home</button>
       </section>
 
       <footer>
