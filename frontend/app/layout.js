@@ -1,5 +1,8 @@
+import "./globals.css";
+
 export const metadata = {
-  title: "SkipTheAgent",
+  title: "Skip The Agent",
+  description: "Sell smart. Settle safe.",
 };
 
 export default function RootLayout({ children }) {
