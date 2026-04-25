@@ -752,3 +752,37 @@ footer h3 {
     grid-template-columns: 1fr;
   }
 }
+.dashboard-listings {
+  margin-top: 32px;
+}
+
+.listing-table {
+  display: grid;
+  gap: 14px;
+}
+
+.listing-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 18px;
+  border-radius: 16px;
+  border: 1px solid var(--border);
+  background: white;
+}
+
+.listing-row p {
+  margin: 6px 0 0;
+  color: var(--muted);
+}
+
+.listing-row span {
+  font-weight: 900;
+  color: var(--gold);
+}
+
+@media (max-width: 650px) {
+  .listing-row {
+    flex-direction: column;
+  }
+}
