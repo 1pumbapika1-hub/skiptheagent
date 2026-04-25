@@ -1,3 +1,4 @@
+import Link from "next/link";
 export default function Home() {
   return (
     <main>
@@ -15,7 +16,7 @@ export default function Home() {
           <a>Buy</a>
           <a>How it works</a>
           <a>Solicitor support</a>
-          <button className="nav-button">List your home</button>
+          <Link href="/list-home" className="nav-button">List your home</Link>
         </div>
       </nav>
 
@@ -32,7 +33,7 @@ export default function Home() {
           </p>
 
           <div className="hero-actions">
-            <button className="primary-button">Start listing</button>
+            <Link href="/list-home" className="primary-button">Start listing</Link>
             <button className="secondary-button">Browse properties</button>
           </div>
 
