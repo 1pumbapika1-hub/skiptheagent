@@ -16,7 +16,14 @@ export default function Home() {
           <a>Buy</a>
           <a>How it works</a>
           <a>Solicitor support</a>
-          <Link href="/list-home" className="nav-button">List your home</Link>
+        
+          <Link href="/login">
+            Login
+          </Link>
+        
+          <Link href="/list-home" className="nav-button">
+            List your home
+          </Link>
         </div>
       </nav>
 
@@ -33,8 +40,13 @@ export default function Home() {
           </p>
 
           <div className="hero-actions">
-            <Link href="/list-home" className="primary-button">Start listing</Link>
-            <button className="secondary-button">Browse properties</button>
+            <Link href="/list-home" className="primary-button">
+              Start listing
+            </Link>
+          
+            <Link href="/buy" className="secondary-button">
+              Browse properties
+            </Link>
           </div>
 
           <div className="trust-row">
@@ -176,7 +188,9 @@ export default function Home() {
       <section className="cta-section">
         <p className="eyebrow">Ready to skip the commission?</p>
         <h2>Start your private sale with a professional system behind you.</h2>
-        <button className="primary-button">List your home</button>
+        <Link href="/list-home" className="primary-button">
+          List your home
+        </Link>
       </section>
 
       <footer>
