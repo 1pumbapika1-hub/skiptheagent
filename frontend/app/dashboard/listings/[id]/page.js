@@ -89,6 +89,28 @@ export default function EditListing({ params }) {
     }
   }
 
+  async function publishListing() {
+    setMessage("Publishing listing...");
+  
+    const { error } = await supabase
+      .from("properties")
+      .update({
+        status: "live",
+        updated_at: new Date().toISOString(),
+      })
+      .eq("id", propertyId);
+  
+    if (error) {
+      setMessage(error.message);
+    } else {
+      setProperty((current) => ({
+        ...current,
+        status: "live",
+      }));
+      setMessage("Listing is now live.");
+    }
+  }
+
   async function uploadImages(event) {
     const files = Array.from(event.target.files);
 
@@ -161,9 +183,15 @@ export default function EditListing({ params }) {
           <p>Status: {property.status}</p>
         </div>
 
-        <button className="primary-button" onClick={saveListing}>
-          Save listing
-        </button>
+        <div style={{ display: "flex", gap: "12px", flexWrap: "wrap" }}>
+          <button className="secondary-button" onClick={saveListing}>
+            Save listing
+          </button>
+        
+          <button className="primary-button" onClick={publishListing}>
+            Publish listing
+          </button>
+        </div>
       </section>
 
       <section className="seller-form">
