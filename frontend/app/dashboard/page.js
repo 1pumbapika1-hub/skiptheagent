@@ -99,26 +99,41 @@ export default function Dashboard() {
           </p>
         ) : (
           <div className="listing-table">
-            {properties.map((property) => (
-              <div className="listing-row" key={property.id}>
-                <div>
-                  <strong>{property.title || "Untitled property"}</strong>
-                  <p>
-                    {property.suburb || "No suburb"} · {property.property_type || "Property"} ·{" "}
-                    {property.status}
-                  </p>
-                </div>
+  {properties.map((property) => (
+    <div className="listing-row" key={property.id}>
+      <div>
+        <strong>{property.title || "Untitled property"}</strong>
+        <p>
+          {property.suburb || "No suburb"} ·{" "}
+          {property.property_type || "Property"} ·{" "}
+          {property.status}
+        </p>
+      </div>
 
-                <div>
-                  <span>
-                    {property.price
-                      ? `$${Number(property.price).toLocaleString()}`
-                      : "No price"}
-                  </span>
-                </div>
-              </div>
-            ))}
-          </div>
+      <div
+        style={{
+          display: "flex",
+          alignItems: "center",
+          gap: "14px",
+          flexWrap: "wrap",
+        }}
+      >
+        <span>
+          {property.price
+            ? `$${Number(property.price).toLocaleString()}`
+            : "No price"}
+        </span>
+
+        <Link
+          href={`/dashboard/listings/${property.id}`}
+          className="secondary-button"
+        >
+          Edit
+        </Link>
+      </div>
+    </div>
+  ))}
+</div>
         )}
       </section>
     </main>
